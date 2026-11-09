@@ -14,11 +14,15 @@ Alla sidor ska visa en gemensam header och footer, en header som ska innehålla 
 
 ### Konfigurera testmiljö och komponenttesta ProductCard
 
-Jag har konfigurerat testmiljön i applikationen, genom att skapa konfigurationssidor.
+Jag har konfigurerat testmiljön i applikationen, genom att skapa konfigurationssidor.med en src
 
 ### Produkter ska få attribut: category och imageUrl i backend
 
+Jag lade till två attribut som ska visas vid varje produkt, kategori och en url för att visa produktbild. I Produktsidan product-cart.ts, som ansvarar för att hämta produkter från backend, under exportfunktionen av typen Product som skickar vidare en produkt för att visas bland produktkorten, lade jag till attributen category:string och imageUrl:string vilket bestämmer att båda attributen ska utgöras av textsträngar. I ProductCard.tsx (produktkortssidan), under funktionen för att visa produktkorten lade jag till en img-tag (tag för att visa bilder i frontend) med src={product.imageUrl}, vilket hämtar 
+
 ### Uppdatera så att formuläret inkluderar category och imageUrl
+
+Även formuläret för att ligga till en produkt på admin-sidan skulle visa ett fält för att lägga till kategori och produktbild. 
 
 ### Frontend ska kunna visa imageUrl för produkter
 
