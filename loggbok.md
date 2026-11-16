@@ -2,11 +2,12 @@
 
 ## Inledning
 
+
 ## Mina bidrag till projektet:
 
 ### Få igång email mikrotjänst
 
-Inledningsvis skulle jag se till att email-mikrotjänsten som var mitt bidrag till backend-tjänsten vi skapade i våras fortfarande fungerar. Jag testade detta i swagger genom att gå igenom alla endpoints som krävs för att lägga en beställnig, logga in med jwt-token som en vanlig användare, 
+Inledningsvis skulle jag se till att email-mikrotjänsten som var mitt bidrag till backend-tjänsten vi skapade i våras fortfarande fungerar. Jag testade detta i swagger genom att gå igenom alla endpoints som krävs för att lägga en beställnig, logga in med jwt-token som en vanlig användare, hämta produkter, skapa order och se att bekräftelsemailet skrevs ut i konsollfönstret lokalt. 
 
 ### Gemensam header och footer
 
@@ -14,11 +15,12 @@ Alla sidor ska visa en gemensam header och footer, en header som ska innehålla 
 
 ### Konfigurera testmiljö och komponenttesta ProductCard
 
-Jag har konfigurerat testmiljön i applikationen, genom att skapa konfigurationssidor.med en src
+Jag har konfigurerat testmiljön i applikationen, genom att skapa konfigurations- och setup-filer med Vitest och React Testing library för att nödvändiga beroenden skulle köras. Sedan skrev jag komponenttest för ProductCard som verivierar att produktiformationen visas korrekt och att funktionen onAdd anropas med rätt produkt när användaren klickar på "lägg till i varukorg". 
+Testerna kan köras lokalt genom att köra kommandot "npm test" i utvecklingsmiljöns terminal och körs även vid build i GitHub Actions-flödet vid koduppladdning (push). På så sätt kontolleras automatiskt att grundläggande funktionalitet vidmakthålls under projektets gång vid framtida koduppändring.
 
 ### Produkter ska få attribut: category och imageUrl i backend
 
-Jag lade till två attribut som ska visas vid varje produkt, kategori och en url för att visa produktbild. I Produktsidan product-cart.ts, som ansvarar för att hämta produkter från backend, under exportfunktionen av typen Product som skickar vidare en produkt för att visas bland produktkorten, lade jag till attributen category:string och imageUrl:string vilket bestämmer att båda attributen ska utgöras av textsträngar. I ProductCard.tsx (produktkortssidan), under funktionen för att visa produktkorten lade jag till en img-tag (tag för att visa bilder i frontend) med src={product.imageUrl}, vilket hämtar 
+Jag lade till två attribut som ska visas vid varje produkt, kategori och en url för att visa produktbild. I Produktsidan product-cart.ts, som ansvarar för att hämta produkter från backend, under exportfunktionen av typen Product som skickar vidare en produkt för att visas bland produktkorten, lade jag till attributen category:string och imageUrl:string vilket bestämmer att båda attributen ska utgöras av textsträngar. I ProductCard.tsx (produktkortssidan), under funktionen för att visa produktkorten lade jag till en img-tag (tag för att visa bilder i frontend) med src={product.imageUrl}, vilket hämtar en bild från en webbadress. 
 
 ### Uppdatera så att formuläret inkluderar category och imageUrl
 
