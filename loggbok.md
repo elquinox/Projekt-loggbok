@@ -24,7 +24,8 @@ Jag lade till två attribut som ska visas vid varje produkt, kategori och en url
 
 ### Uppdatera så att formuläret inkluderar category och imageUrl
 
-Även formuläret för att ligga till en produkt på admin-sidan skulle visa ett fält för att lägga till kategori och produktbild. 
+Även formuläret för att lägga till en produkt på admin-sidan skulle visa ett fält för att lägga till kategori och produktbild. Jag uppdaterade produktformuläret i adminProductPage.tsx genom att lägga till const [category, setCategory] och const [imageUrl, setImageUrl] och sedan en input-tag var för imageUrl samt category.
+
 
 ### Frontend ska kunna visa imageUrl för produkter
 
@@ -33,3 +34,5 @@ Jag lade till två attribut som ska visas vid varje produkt, kategori och en url
 ###
 
 ## Det agila arbetet
+
+Vi har använt trello för att strukturera och dela upp arbetet, där vi infogat uppgifterna från backloggen. Vi har haft Weekly planning varje måndag där vi planerat och delat upp arbetet inför veckan, Daily standups de övriga veckodagarna där vi stämt av arbetet och kommit överrens om vidare uppdelning av arbetet när någon del blivit klar, samt Sprint reviews på fredagar där vi redovisat veckans arbete genom att visa en demo över sidans uppdaterade funktioner.
