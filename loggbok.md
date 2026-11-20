@@ -2,6 +2,7 @@
 
 ## Inledning
 
+Vi har under detta projektarbeta utvecklat en fullstack-webshop byggd med en mikrotjänstbaserad arkitektur. Vi har under denna termin utvecklat frontenddelen till mikrotjänsterna vi utvecklade i våras. Arbetet har omfattat utveckling av funktionalitet, löpande förbättringar av användargränssnittet samt konfigurering av testmiljö och automatiserade tester. Mina bidrag har varit att få igång projektets email-mikrotjänst, utveckla en gemensam layout, utöka produktinformationen med nya attribut samt implementera funktionalitet för att visa enskilda produkter med kategori och bild samt att konfigurera testmiljö och skriva komponenttester som kan köra både lokalt och i GitHub.
 
 ## Mina bidrag till projektet:
 
