@@ -11,7 +11,7 @@ Inledningsvis skulle jag se till att email-mikrotjänsten som var mitt bidrag ti
 
 ### Gemensam header och footer
 
-Alla sidor ska visa en gemensam header och footer, en header som ska innehålla webshopens namn, innan inloggning en flik för att logga in en befintlig användare. För inloggad användare visas en flik för att visa produkter, en varukorg från vilken man lägger beställningar samt en knapp för att logga ut. I footern visas en copyrightsymbol, webshopens namn, årtal samt all rights reserved. För att skapa grundstrukturen för detta skapade jag en .tsx-sida var för header och footer med funktioner för att returnera det som ska visas i respektive sidhuvud och -fot. Innehållet i dessa har löpande lagts till under projektets gång.
+Alla sidor ska visa en gemensam header och footer, en header som ska innehålla webshopens namn, innan inloggning en flik för att logga in en befintlig användare. För inloggad användare visas en flik för att visa produkter, en varukorg från vilken man lägger beställningar samt en knapp för att logga ut. I footern visas en copyrightsymbol, webshopens namn, årtal samt all rights reserved. För att skapa grundstrukturen för detta skapade jag en .tsx-sida var för header och footer med funktioner för att returnera det som ska visas i respektive sidhuvud och sidfot. Innehållet i dessa har löpande lagts till under projektets gång.
 
 ### Konfigurera testmiljö och komponenttesta ProductCard
 
@@ -24,10 +24,12 @@ Jag lade till två attribut som ska visas vid varje produkt, kategori och en url
 
 ### Uppdatera så att formuläret inkluderar category och imageUrl
 
-Även formuläret för att lägga till en produkt på admin-sidan skulle visa ett fält för att lägga till kategori och produktbild. Jag uppdaterade produktformuläret i adminProductPage.tsx genom att lägga till const [category, setCategory] och const [imageUrl, setImageUrl] och sedan en input-tag var för imageUrl samt category.
+Även formuläret för att lägga till en produkt på admin-sidan skulle visa ett fält för att lägga till kategori och produktbild. Jag uppdaterade produktformuläret i adminProductPage.tsx genom att lägga till const [category, setCategory] och const [imageUrl, setImageUrl] och sedan en input-tag var för imageUrl samt category. På så sätt kan en admin välja kategori för en produkt och klistra in en länk till en produktbild för ett mer detaljerat produktkort.
 
 
 ### Frontend ska kunna visa imageUrl för produkter
+Jag har uppdaterat frontend så att produktbilder visas med hjälp av det nya attributet imageUrl. Funkitonen implementerades på både produktsidan (ProductCard.tsx) och adminsidan (adminProductPage.tsx). När en produkt hämtas från backend finns en bildadress kopplad till den som används i frontend för att visa en bild på produkten. Jag uppdaterade testet för ProductCard för att säkerställa att både kategori och imageUrl hämtas och visas korrekt.
+
 
 ### Product-service endpoint & detaljvy för produkt
 
@@ -35,4 +37,4 @@ Jag lade till två attribut som ska visas vid varje produkt, kategori och en url
 
 ## Det agila arbetet
 
-Vi har använt trello för att strukturera och dela upp arbetet, där vi infogat uppgifterna från backloggen. Vi har haft Weekly planning varje måndag där vi planerat och delat upp arbetet inför veckan, Daily standups de övriga veckodagarna där vi stämt av arbetet och kommit överrens om vidare uppdelning av arbetet när någon del blivit klar, samt Sprint reviews på fredagar där vi redovisat veckans arbete genom att visa en demo över sidans uppdaterade funktioner.
+Vi har använt trello för att strukturera och dela upp arbetet, där vi infogat uppgifterna från backloggen. Vi har haft Weekly planning varje måndag där vi planerat och delat upp arbetet inför veckan, Daily standups de övriga veckodagarna där vi stämt av arbetet och kommit överrens om vidare uppdelning av arbetet när någon del blivit klar, samt Sprint retrospect på fredagar där vi redovisat veckans arbete genom att visa en demo över sidans uppdaterade funktioner. Vi har använt Scrum poker, en metod för att uppskatta varje uppgifts omfattning där var och en av gruppmedlemmarna röstar genom att ge poängen 1, 3, 5, 8 eller 13 för uppskattad omfattning av uppgiften, för att göra arbetet jämlikt och rättvist.
